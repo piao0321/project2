@@ -52,7 +52,7 @@ def similar(img1, img2):  # 求相似度
 def find(capture_img):
     s = []
     for i in range(0, 1000):
-        img2 = Image.open('picture/' + str(i) + '.png')
+        img2 = Image.open('/app/project2/picture/' + str(i) + '.png')
         s.append([i, similar(capture_img, img2)])
     for i in range(0, len(s) - 1):
         for j in range(0, len(s) - 1 - i):
@@ -88,15 +88,15 @@ def get():
 
         if choice == 'png1':
             with col2:
-                img = Image.open('app/project2/picture/' + str(s[1][0]) + ".png")
+                img = Image.open('/app/project2/picture/' + str(s[1][0]) + ".png")
                 st.image(img, width=300, caption="TOP1")
         elif choice == 'png2':
             with col2:
-                img = Image.open('app/project2/picture/' + str(s[2][0]) + ".png")
+                img = Image.open('/app/project2/picture/' + str(s[2][0]) + ".png")
                 st.image(img, width=300, caption="TOP2")
         elif choice == 'png3':
             with col2:
-                img = Image.open('app/project2/picture/' + str(s[3][0]) + ".png")
+                img = Image.open('/app/project2/picture/' + str(s[3][0]) + ".png")
                 st.image(img, width=300, caption="TOP3")
         df = pd.DataFrame({
             'second column': column
