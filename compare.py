@@ -88,15 +88,15 @@ def get():
 
         if choice == 'png1':
             with col2:
-                img = Image.open('picture/' + str(s[1][0]) + ".png")
+                img = Image.open('app/project2/picture/' + str(s[1][0]) + ".png")
                 st.image(img, width=300, caption="TOP1")
         elif choice == 'png2':
             with col2:
-                img = Image.open('picture/' + str(s[2][0]) + ".png")
+                img = Image.open('app/project2/picture/' + str(s[2][0]) + ".png")
                 st.image(img, width=300, caption="TOP2")
         elif choice == 'png3':
             with col2:
-                img = Image.open('picture/' + str(s[3][0]) + ".png")
+                img = Image.open('app/project2/picture/' + str(s[3][0]) + ".png")
                 st.image(img, width=300, caption="TOP3")
         df = pd.DataFrame({
             'second column': column
